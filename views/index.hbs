@@ -2,40 +2,26 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <style media="screen">
-	body {
-		overflow: hidden;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-
-	img {
-		width: 100%;
-		height: 100%;
-	}
-</style>
-
-<script type="text/javascript" src="/js/rainyday.min.js"></script>
-<script type="text/javascript">
-	function run() {
-		var image = document.getElementById('background');
-		image.onload = function() {
-			var engine = new RainyDay({
-				image: this
-			});
-			engine.rain([ [0, 2, 200], [3, 3, 1] ], 100);
-		};
-
-    	image.src = '/img/OVQkDRE.jpg';
-    }
-    window.onload = function() {
-    	run();
-    }
-</script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
-<img id="background" alt="background" src="" />
+	<script src="js/three.min.js" ></script>
+<script src="js/tween.min.js" ></script>
+<script src="js/TrackballControls.js" ></script>
+<script src="js/CSS3DRenderer.js" ></script>
+
+	<div id="container"></div>
+
+<div id="menu">
+<button id="table">表面</button>
+<button id="sphere">球体</button>
+<button id="helix">螺旋</button>
+<button id="grid">网格</button>
+</div>
+
+
+	<<script src="/js/index.js" type="text/javascript" charset="utf-8" async defer></script>
 
   </body>
 </html>
